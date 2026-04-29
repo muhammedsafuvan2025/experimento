@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Safuvan | Technical Support Specialist</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080b08'/%3E%3Crect width='32' height='32' rx='6' fill='none' stroke='%2322c55e' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Georgia%2C serif' font-size='13' font-weight='700' fill='%2322c55e' text-anchor='middle' letter-spacing='1'%3EMS%3C/text%3E%3C/svg%3E">
+    <script>
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Geist:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="spotlight" aria-hidden="true"></div>
+    <div class="portrait-bg" aria-hidden="true"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="assets/Muhammed_Safuvan_Resume_3.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Résumé</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-full">
+
+        <!-- Top status bar -->
+        <div class="hf-topbar">
+            <span class="hf-status"><span class="otw-dot"></span>open to work</span>
+            <span class="hf-loc">London, ON, Canada</span>
+            <span class="hf-time" id="hfTime">--:--:--</span>
+        </div>
+
+        <!-- Split layout -->
+        <div class="hf-split">
+
+            <!-- LEFT: text content -->
+            <div class="hf-left">
+                <div class="hf-label">sys.admin · cloud · it.support</div>
+
+                <h1 class="hf-name">
+                    <span class="hf-line hf-muhammed">Muhammed</span>
+                    <span class="hf-line hf-line2">Safuvan</span>
+                </h1>
+
+                <div class="hf-tagline">
+                    <span class="hf-tag-dot"></span>
+                    <div>
+                        <div class="hf-tag-title">Systems. Solved.</div>
+                        <div class="hf-tag-sub">I build reliable infrastructure.<br>You focus on growth.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: photo bleeding to edge -->
+            <div class="hf-photo-col">
+                <img src="profilepic.png" alt="Muhammed Safuvan" class="hf-hero-photo">
+            </div>
+
+        </div>
+
+        <!-- Bottom action bar -->
+        <div class="hf-bottom">
+            <div class="hf-bottom-left">
+                <a href="#contact" class="hf-cta mag-btn">Get In Touch →</a>
+                <a href="#projects" class="hf-link mag-btn">View work →</a>
+                <a href="assets/Muhammed_Safuvan_Resume_3.pdf" class="hf-link mag-btn" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+                <a href="https://www.linkedin.com/in/muhammed-safuvan-b81312189/" class="hf-link hf-linkedin mag-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+            </div>
+            <div class="hf-scroll-hint">
+                <div class="hf-scroll-line"></div>
+                <span>scroll</span>
+            </div>
+        </div>
+
+        <!-- Corner bracket decorations -->
+        <div class="hf-corner hf-tl"></div>
+        <div class="hf-corner hf-tr"></div>
+        <div class="hf-corner hf-bl"></div>
+        <div class="hf-corner hf-br"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <span class="section-label">// about</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>CompTIA A+ certified</strong> sysadmin who built a thermal-imaging drone from scratch for my engineering thesis, moved across the world to Canada,
+                        and now I'm looking to break into the MSP / IT support space in Southwestern Ontario.
+                        I've administered Windows Server environments, managed Active Directory and M365 tenants,
+                        and debugged networking issues at 2 AM — the usual.
+                    </p>
+                    <p>
+                        Outside of tech, I'm a cinema obsessive (<em>Interstellar</em> is the GOAT, don't argue),
+                        an amateur photographer and videographer with a long-term goal of filming in every country on earth,
+                        and I spend way too much time reading about geopolitics and space exploration.
+                        Hans Zimmer soundtracks are my deployment music.
+                    </p>
+
+                    <!-- Personal DNA strip -->
+                    <div class="about-dna" id="aboutDna">
+                        <div class="dna-item">
+                            <span class="dna-icon">🎬</span>
+                            <span class="dna-label">Interstellar</span>
+                            <span class="dna-sub">all-time favourite</span>
+                        </div>
+                        <div class="dna-item">
+                            <span class="dna-icon">🎵</span>
+                            <span class="dna-label">Hans Zimmer</span>
+                            <span class="dna-sub">deployment music</span>
+                        </div>
+                        <div class="dna-item">
+                            <span class="dna-icon">📸</span>
+                            <span class="dna-label">Every Country</span>
+                            <span class="dna-sub">on video — the goal</span>
+                        </div>
+                        <div class="dna-item">
+                            <span class="dna-icon"><img src="man united.png" alt="Manchester United" class="manutd-logo"></span>
+                            <span class="dna-label">Man United</span>
+                            <span class="dna-sub">pain is loyalty</span>
+                        </div>
+                        <div class="dna-item">
+                            <span class="dna-icon">🌍</span>
+                            <span class="dna-label">Geopolitics</span>
+                            <span class="dna-sub">maps &amp; borders nerd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Journey Section -->
+    <div id="journey" style="height:500vh; position:relative;">
+      <div id="jSticky" style="position:sticky; top:0; height:100vh; background:var(--bg-0); display:flex; flex-direction:column; justify-content:center;">
+
+        <!-- Progress bar -->
+        <div style="position:absolute; top:60px; left:0; right:0; height:1px; background:var(--br-1);">
+          <div id="jBar" style="height:100%; width:0%; background:var(--accent); box-shadow:0 0 8px var(--gr-glow); transition:width 0.1s;"></div>
+        </div>
+
+        <!-- Giant bg year -->
+        <div id="jBgYr" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:'Space Grotesk',sans-serif; font-size:28vw; font-weight:700; color:var(--accent); opacity:0.04; pointer-events:none; user-select:none; letter-spacing:-0.06em; white-space:nowrap;">2018</div>
+
+        <!-- Two column layout -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; max-width:1200px; margin:0 auto; padding:0 3rem; width:100%; gap:0; position:relative; z-index:2;">
+
+          <!-- LEFT -->
+          <div style="padding-right:3rem; border-right:1px solid var(--br-1);">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); opacity:0.8; margin-bottom:1.5rem;">// journey</div>
+            <div id="jYear" style="font-family:'Space Grotesk',sans-serif; font-size:clamp(3rem,7vw,6rem); font-weight:700; letter-spacing:-0.05em; color:var(--tx-1); line-height:1; margin-bottom:0.5rem;">2018</div>
+            <div id="jLoc" style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--tx-3); margin-bottom:2.5rem;">📍 Kochi, India</div>
+            <div id="jDots" style="display:flex; gap:8px; align-items:center;">
+              <div class="jd on" data-i="0"></div>
+              <div class="jd" data-i="1"></div>
+              <div class="jd" data-i="2"></div>
+              <div class="jd" data-i="3"></div>
+              <div class="jd" data-i="4"></div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div style="padding-left:3rem; position:relative; height:55vh;">
+            <div class="jc on" data-i="0" style="position:absolute; top:50%; transform:translateY(-50%); left:3rem; right:0;">
+              <div class="jt">CUSAT</div>
+              <h2 class="jh">B.Tech in Electronics<br>&amp; Communication</h2>
+              <p class="jb">Cochin University of Science &amp; Technology. Four years building engineering foundations — embedded systems, signal processing, hardware-software integration. The spark that started everything.</p>
+            </div>
+            <div class="jc" data-i="1" style="position:absolute; top:50%; transform:translateY(-50%); left:3rem; right:0;">
+              <div class="jt">Impreza Technologies</div>
+              <h2 class="jh">System Administrator</h2>
+              <p class="jb">First professional role. Windows Server, Active Directory, Microsoft 365, core networking. 30+ endpoints. Real production responsibility. Where theory became muscle memory.</p>
+            </div>
+            <div class="jc" data-i="2" style="position:absolute; top:50%; transform:translateY(-50%); left:3rem; right:0;">
+              <div class="jt">New Chapter</div>
+              <h2 class="jh">Arrived in Canada</h2>
+              <p class="jb">Relocated to London, Ontario. Enrolled at Fanshawe College for the Post-Graduate Certificate in Business &amp; Information Systems Architecture. New country. Same drive.</p>
+            </div>
+            <div class="jc" data-i="3" style="position:absolute; top:50%; transform:translateY(-50%); left:3rem; right:0;">
+              <div class="jt">Fanshawe College</div>
+              <h2 class="jh">Graduate &amp; Certified</h2>
+              <p class="jb">PGC completed. AWS, Azure, Python, Power BI, advanced networking. CompTIA A+ certified. Express Entry pathway in motion — targeting IT support roles across Southwestern Ontario.</p>
+            </div>
+            <div class="jc" data-i="4" style="position:absolute; top:50%; transform:translateY(-50%); left:3rem; right:0;">
+              <div class="jt open">Open to Work</div>
+              <h2 class="jh">What's Next</h2>
+              <p class="jb">Land a role in IT support or an MSP. Build Canadian experience. Achieve permanent residency. The story isn't finished — this is just where you come in.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <span class="section-label">// skills</span>
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skills-section-group">
+                <p class="skills-group-label">Sysadmin & IT</p>
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Operating Systems</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Windows Server 2016/2019/2022</span>
+                            <span class="stag">Windows 10/11</span>
+                            <span class="stag">Ubuntu</span>
+                            <span class="stag">Debian</span>
+                            <span class="stag">CentOS</span>
+                            <span class="stag">macOS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Identity & M365</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Active Directory</span>
+                            <span class="stag">Group Policy (GPO)</span>
+                            <span class="stag">Azure AD / Entra ID</span>
+                            <span class="stag">M365 Admin Center</span>
+                            <span class="stag">Exchange Online</span>
+                            <span class="stag">SharePoint Online</span>
+                            <span class="stag">Teams Admin</span>
+                            <span class="stag">OneDrive</span>
+                            <span class="stag">Intune MDM</span>
+                            <span class="stag">MFA / Conditional Access</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6"/><rect x="16" y="16" width="6" height="6"/><rect x="2" y="16" width="6" height="6"/><path d="M12 8v4M8 16H5a1 1 0 0 1-1-1v-1M19 16v-1a1 1 0 0 0-1-1h-3"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Networking</h3>
+                        <div class="skill-tags">
+                            <span class="stag">TCP/IP</span>
+                            <span class="stag">DNS</span>
+                            <span class="stag">DHCP</span>
+                            <span class="stag">VPN (IPsec / SSL)</span>
+                            <span class="stag">LAN / WLAN</span>
+                            <span class="stag">Subnetting / CIDR</span>
+                            <span class="stag">VLANs</span>
+                            <span class="stag">NAT / Firewall rules</span>
+                            <span class="stag">Wireshark / Packet analysis</span>
+                            <span class="stag">pfSense</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Security & Endpoint</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Endpoint hardening</span>
+                            <span class="stag">Patch management</span>
+                            <span class="stag">Windows Defender / AV</span>
+                            <span class="stag">Access control (RBAC)</span>
+                            <span class="stag">Event log analysis</span>
+                            <span class="stag">Incident triage</span>
+                            <span class="stag">Backup & recovery</span>
+                            <span class="stag">Encryption (BitLocker)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Server Administration</h3>
+                        <div class="skill-tags">
+                            <span class="stag">File & Print Services</span>
+                            <span class="stag">IIS / Web server</span>
+                            <span class="stag">systemd services</span>
+                            <span class="stag">Cron jobs</span>
+                            <span class="stag">Log management</span>
+                            <span class="stag">VM provisioning</span>
+                            <span class="stag">Hyper-V / VMware</span>
+                            <span class="stag">Remote Desktop (RDS)</span>
+                            <span class="stag">SSH / SCP / WinSCP</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Scripting & Automation</h3>
+                        <div class="skill-tags">
+                            <span class="stag">PowerShell</span>
+                            <span class="stag">Bash</span>
+                            <span class="stag">Python</span>
+                            <span class="stag">Task Scheduler</span>
+                            <span class="stag">Cron</span>
+                            <span class="stag">AD bulk user provisioning</span>
+                            <span class="stag">Log parsing scripts</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="stag">AWS EC2</span>
+                            <span class="stag">AWS S3</span>
+                            <span class="stag">AWS IAM</span>
+                            <span class="stag">AWS Lambda</span>
+                            <span class="stag">AWS CloudWatch</span>
+                            <span class="stag">Azure VMs</span>
+                            <span class="stag">Azure AD</span>
+                            <span class="stag">Docker</span>
+                            <span class="stag">GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">IT Support & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Ticketing (JIRA / ServiceNow)</span>
+                            <span class="stag">Remote support (RDP / AnyDesk)</span>
+                            <span class="stag">Hardware diagnosis & repair</span>
+                            <span class="stag">Printer / peripheral setup</span>
+                            <span class="stag">PuTTY</span>
+                            <span class="stag">Postman</span>
+                            <span class="stag">VS Code</span>
+                            <span class="stag">GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Data & BI</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Power BI</span>
+                            <span class="stag">MySQL</span>
+                            <span class="stag">PostgreSQL</span>
+                            <span class="stag">MongoDB</span>
+                            <span class="stag">SQLite</span>
+                            <span class="stag">Pandas</span>
+                            <span class="stag">NumPy</span>
+                            <span class="stag">Advanced Excel</span>
+                            <span class="stag">DAX</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="skills-section-group">
+                <p class="skills-group-label">Electronics & Engineering</p>
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Embedded Systems</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Arduino</span>
+                            <span class="stag">Raspberry Pi</span>
+                            <span class="stag">STM32 microcontrollers</span>
+                            <span class="stag">GPIO interfacing</span>
+                            <span class="stag">I2C / SPI / UART</span>
+                            <span class="stag">PWM control</span>
+                            <span class="stag">Sensor integration</span>
+                            <span class="stag">Flight controllers (drone)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Signal Processing</h3>
+                        <div class="skill-tags">
+                            <span class="stag">DSP fundamentals</span>
+                            <span class="stag">Fourier transforms (DFT/FFT)</span>
+                            <span class="stag">Digital filters (FIR/IIR)</span>
+                            <span class="stag">AM / FM / PM modulation</span>
+                            <span class="stag">OFDM basics</span>
+                            <span class="stag">Sampling & quantisation</span>
+                            <span class="stag">MATLAB / Simulink</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Circuit & Hardware</h3>
+                        <div class="skill-tags">
+                            <span class="stag">Circuit design & analysis</span>
+                            <span class="stag">Op-amps</span>
+                            <span class="stag">Power electronics</span>
+                            <span class="stag">PCB layout basics</span>
+                            <span class="stag">Oscilloscope / multimeter</span>
+                            <span class="stag">Soldering & assembly</span>
+                            <span class="stag">ESC & brushless motor wiring</span>
+                            <span class="stag">Proteus / LTspice simulation</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3h-8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                        </div>
+                        <h3 class="skill-card-title">Image & Computer Vision</h3>
+                        <div class="skill-tags">
+                            <span class="stag">OpenCV</span>
+                            <span class="stag">Thermal image processing</span>
+                            <span class="stag">Heat signature detection</span>
+                            <span class="stag">Image thresholding</span>
+                            <span class="stag">Cluster detection</span>
+                            <span class="stag">NumPy array processing</span>
+                            <span class="stag">Python (PIL / OpenCV)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="skills-section-group">
+                <p class="skills-group-label">Certifications</p>
+                <div class="skills-grid skills-grid-cert">
+
+                    <div class="skill-card skill-card-cert">
+                        <div class="cert-hero">
+                            <img src="assets/A+-png.png" alt="CompTIA A+ Certified" class="cert-hero-logo">
+                            <div class="cert-hero-label">
+                                <span class="cert-hero-title">CompTIA A+</span>
+                                <span class="cert-hero-sub">Core 1 &amp; Core 2 Certified</span>
+                            </div>
+                        </div>
+                        <h3 class="skill-card-title">Certifications</h3>
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <span class="cert-badge cert-next">◦</span>
+                                <span class="cert-name">AWS Cloud Practitioner <em>next</em></span>
+                            </div>
+                            <div class="cert-item">
+                                <span class="cert-badge cert-done">✓</span>
+                                <span class="cert-name">PGC — Business & Information Systems Architecture</span>
+                            </div>
+                            <div class="cert-item">
+                                <span class="cert-badge cert-done">✓</span>
+                                <span class="cert-name">B.Tech ECE — CUSAT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <span class="section-label">// experience</span>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="impreza.webp" alt="Impreza Technologies logo" class="timeline-logo">
+                            <h3 class="timeline-title">System Administrator</h3>
+                            <span class="timeline-company">Impreza Technologies — Kochi, India</span>
+                            <span class="timeline-date">June 2022 – July 2023</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Administered and maintained Windows Server, Linux, and macOS environments to ensure availability, security, and stability</li>
+                            <li>Managed Active Directory and Microsoft 365 (Exchange Online, Teams, OneDrive, SharePoint) including users, access, and service configuration</li>
+                            <li>Handled Linux system administration tasks: users/groups, systemd services, cron jobs, log analysis, and basic Bash scripting</li>
+                            <li>Managed and troubleshot core network services such as DNS, DHCP, VPN, and LAN/Wi‑Fi connectivity in a mixed‑OS environment</li>
+                            <li>Monitored system performance and implemented endpoint security, patching, and access controls across platforms</li>
+                            <li>Supported backup and recovery operations, test restores, configuration documentation, and vendor coordination for infrastructure and licensing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="osmows.jpg" alt="Osmow's logo" class="timeline-logo">
+                            <h3 class="timeline-title">Customer Service Associate | Supervisor</h3>
+                            <span class="timeline-company">Osmow's — London, ON</span>
+                            <span class="timeline-date">2023 – Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Promoted to Supervisor based on performance, reliability, and leadership in a high‑volume environment</li>
+                            <li>Led shift operations, ensuring smooth workflow, service quality, and adherence to procedures</li>
+                            <li>Trained and onboarded new employees and provided ongoing coaching to maintain performance standards</li>
+                            <li>Managed inventory tracking, stock replenishment, and coordination with management to prevent shortages</li>
+                            <li>Handled customer escalations professionally, maintaining high satisfaction and repeat business</li>
+                            <li>Operated and troubleshot POS systems, cash handling, and end‑of‑shift reconciliation while supporting team morale</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="dr.oetker.png" alt="Dr. Oetker logo" class="timeline-logo">
+                            <h3 class="timeline-title">Machine Operator – Production</h3>
+                            <span class="timeline-company">Dr. Oetker — London, ON</span>
+                            <span class="timeline-date">2023</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Operated Dienst & Meurer packaging machines in a food production environment</li>
+                            <li>Monitored machine performance, product flow, and packaging quality during production runs</li>
+                            <li>Performed routine equipment checks and basic troubleshooting to minimize downtime</li>
+                            <li>Followed strict food safety, hygiene, and workplace safety protocols</li>
+                            <li>Maintained cleanliness, organization, and consistency in a shift‑based, high‑output environment requiring precision and physical endurance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- SAFE SURF -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🔒</div>
+                        <div class="project-links">
+                            <a href="https://muhammedsafuvan2025.github.io/safeSurfWebsite/#" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Safe Surf Extension website">↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Safe Surf – Chrome Extension</h3>
+                    <p class="project-description">
+                        A Chrome extension that reads Terms &amp; Conditions and privacy policies so you don't have to.
+                        Flags high-risk keywords, scores privacy threats, and uses AI to summarise what you're agreeing to.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">Chrome Extension</span>
+                        <span class="tech-tag">Data Scraping</span>
+                    </div>
+                    <a href="https://muhammedsafuvan2025.github.io/safeSurfWebsite/#"
+                       target="_blank" rel="noopener noreferrer"
+                       class="project-visit-btn">
+                        View Live Site <span>→</span>
+                    </a>
+                </div>
+
+                <!-- DRONE — clickable, opens animated modal -->
+                <div class="project-card drone-card" id="droneCard" style="cursor:pointer;" onclick="openDroneModal()">
+                    <div class="project-header">
+                        <div class="project-icon">🛰️</div>
+                        <div class="project-links">
+                            <span class="project-link drone-click-hint">click to explore →</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Thermal Imaging Drone</h3>
+                    <p class="project-description">
+                        Final year engineering project. Built a drone from scratch, mounted a thermal sensor,
+                        and wrote Python code to detect heat signatures of animals hiding in agricultural fields —
+                        invisible to traditional drones.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">Thermal Imaging</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <div class="drone-pulse-hint">
+                        <span class="dp-dot"></span>
+                        <span>interactive story inside</span>
+                    </div>
+                </div>
+                <div class="project-card subnet-card" id="subnetCard">
+                    <div class="project-header">
+                        <div class="project-icon">🔢</div>
+                        <div class="project-links">
+                            <span class="project-link" style="font-size:0.7rem;color:var(--tx-3);">live tool ↓</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Subnet Calculator</h3>
+                    <p class="project-description">
+                        A working CIDR/subnet calculator built into this page. Enter an IP and CIDR — 
+                        get network address, broadcast, usable range, and host count instantly.
+                    </p>
+                    <div class="subnet-tool">
+                        <div class="subnet-input-row">
+                            <input type="text" id="subnetIp" class="subnet-input" placeholder="192.168.1.0" value="192.168.1.0" />
+                            <span class="subnet-slash">/</span>
+                            <input type="number" id="subnetCidr" class="subnet-input subnet-cidr" placeholder="24" value="24" min="0" max="32" />
+                            <button class="subnet-calc-btn" id="subnetCalcBtn">Calc</button>
+                        </div>
+                        <div class="subnet-results" id="subnetResults"></div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">CIDR</span>
+                        <span class="tech-tag">Binary Math</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <span class="section-label">// education</span>
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="assets/fanshawe-logo.png" alt="Fanshawe College Logo" class="education-logo">
+                    </div>
+                    <h3 class="education-degree">Post Graduate Certificate</h3>
+                    <p class="education-field">Business & Information Systems Architecture</p>
+                    <p class="education-school">Fanshawe College</p>
+                    <p class="education-date">2023 – 2025</p>
+                    <div class="education-details">
+                        <p>Covered Active Directory, Microsoft 365 Admin, Azure AD, advanced networking, IT support workflows, 
+                        troubleshooting labs, AWS cloud, Python, and advanced SQL & BI.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="assets/cusat-logo.png" alt="CUSAT Logo" class="education-logo">
+                    </div>
+                    <h3 class="education-degree">B.Tech</h3>
+                    <p class="education-field">Electronics and Communication Engineering</p>
+                    <p class="education-school">Cochin University of Science & Technology</p>
+                    <p class="education-date">2018 – 2022</p>
+                    <div class="education-details">
+                        <p>Built a strong knowledge in electronics, embedded systems, and communication engineering—circuit design and troubleshooting, signal processing. Digital signal and image processing, modulation concepts, and hardware–software integration using lab tools and simulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <span class="section-label">// contact</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">I'm always open to discussing new opportunities and interesting projects.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:muhammedsafuvan1999@gmail.com">muhammedsafuvan1999@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+12269778208">+1 (226) 977-8208</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>London, ON, Canada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <p>Ready to work together?</p>
+                    <a href="mailto:muhammedsafuvan1999@gmail.com" class="btn btn-primary btn-large">Send Me an Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Muhammed Safuvan</p>
+            <p class="footer-note">Kochi → London, ON · Still building.</p>
+            <a href="vibes.html" class="footer-vibes-link">Beyond the Resume ↗</a>
+        </div>
+    </footer>
+
+    <!-- Resume FAB -->
+    <a href="assets/Muhammed_Safuvan_Resume_3.pdf" class="resume-fab" target="_blank" rel="noopener noreferrer" aria-label="Download résumé" title="Download Résumé">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+    </a>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <!-- Command Palette Button -->
+    <button class="cmd-btn" id="cmdBtn" aria-label="Open command palette (Ctrl+K)">
+        ⚡
+    </button>
+
+    <!-- Command Palette Modal -->
+    <div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command palette" hidden>
+        <div class="cmdk-backdrop" data-cmdk-close="true"></div>
+        <div class="cmdk-panel" role="document">
+            <div class="cmdk-header">
+                <div class="cmdk-title">Quick Actions</div>
+                <div class="cmdk-hint">Ctrl+K · Esc</div>
+            </div>
+            <input class="cmdk-input" id="cmdkInput" type="text" placeholder="Type to search… (e.g. resume, projects, contact)" autocomplete="off" />
+            <div class="cmdk-list" id="cmdkList" role="listbox" aria-label="Actions list"></div>
+        </div>
+    </div>
+
+
+    <!-- Drone Project Modal -->
+    <div class="drone-modal" id="droneModal" aria-hidden="true">
+        <div class="drone-modal-backdrop" onclick="closeDroneModal()"></div>
+        <div class="drone-modal-panel">
+            <button class="drone-modal-close" onclick="closeDroneModal()">✕</button>
+
+            <!-- Progress dots -->
+            <div class="dm-dots">
+                <div class="dm-dot active" data-step="0"></div>
+                <div class="dm-dot" data-step="1"></div>
+                <div class="dm-dot" data-step="2"></div>
+                <div class="dm-dot" data-step="3"></div>
+                <div class="dm-dot" data-step="4"></div>
+            </div>
+
+            <!-- Steps -->
+            <div class="dm-steps">
+
+                <div class="dm-step active" data-step="0">
+                    <div class="dm-visual">
+                        <div class="dm-drone-svg">
+                            <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="14" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+                                <circle cx="160" cy="40" r="14" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+                                <circle cx="40" cy="80" r="14" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+                                <circle cx="160" cy="80" r="14" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+                                <rect x="85" y="50" width="30" height="20" rx="4" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+                                <line x1="40" y1="40" x2="85" y2="57" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+                                <line x1="160" y1="40" x2="115" y2="57" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+                                <line x1="40" y1="80" x2="85" y2="63" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+                                <line x1="160" y1="80" x2="115" y2="63" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+                                <ellipse cx="40" cy="40" rx="18" ry="4" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3" class="rotor"/>
+                                <ellipse cx="160" cy="40" rx="18" ry="4" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3" class="rotor"/>
+                                <ellipse cx="40" cy="80" rx="18" ry="4" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3" class="rotor"/>
+                                <ellipse cx="160" cy="80" rx="18" ry="4" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3" class="rotor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dm-tag">01 — The Problem</div>
+                    <h2 class="dm-title">Animals hiding in plain sight</h2>
+                    <p class="dm-body">Agricultural fields in Kerala face a serious issue — wild animals like boars and deer hide inside dense bushes at night, destroying crops. Traditional drones with RGB cameras can't see them. We built the solution for our final year engineering project at CUSAT.</p>
+                </div>
+
+                <div class="dm-step" data-step="1">
+                    <div class="dm-visual">
+                        <div class="dm-build-anim">
+                            <div class="dm-part dm-frame">Frame</div>
+                            <div class="dm-part dm-motors">× 4 Motors</div>
+                            <div class="dm-part dm-fc">Flight Controller</div>
+                            <div class="dm-part dm-esc">ESC</div>
+                            <div class="dm-part dm-sensor">Thermal Sensor</div>
+                        </div>
+                    </div>
+                    <div class="dm-tag">02 — The Build</div>
+                    <h2 class="dm-title">Built from scratch</h2>
+                    <p class="dm-body">We assembled the entire drone from raw components — carbon fibre frame, brushless motors, ESC controllers, a flight controller board, and a thermal imaging sensor module. Every part calibrated by hand. This wasn't a kit — we built it.</p>
+                </div>
+
+                <div class="dm-step" data-step="2">
+                    <div class="dm-visual">
+                        <div class="dm-thermal-view">
+                            <div class="dm-field">
+                                <div class="dm-bush b1"></div>
+                                <div class="dm-bush b2"></div>
+                                <div class="dm-bush b3"></div>
+                                <div class="dm-heat-sig h1" title="heat signature detected">
+                                    <span class="dm-heat-ring"></span>
+                                </div>
+                                <div class="dm-heat-sig h2" title="heat signature detected">
+                                    <span class="dm-heat-ring"></span>
+                                </div>
+                            </div>
+                            <div class="dm-scanline"></div>
+                        </div>
+                    </div>
+                    <div class="dm-tag">03 — The Tech</div>
+                    <h2 class="dm-title">Seeing heat through foliage</h2>
+                    <p class="dm-body">The thermal sensor detects infrared radiation — animal body heat shows up as bright signatures even through dense bush cover. We mounted it on a gimbal for stable aerial capture. What's invisible to the human eye from 30 metres up becomes clearly visible on our feed.</p>
+                </div>
+
+                <div class="dm-step" data-step="3">
+                    <div class="dm-visual">
+                        <div class="dm-code-block">
+                            <div class="dm-code-line"><span class="dc-kw">import</span> <span class="dc-mod">thermal_sdk</span>, <span class="dc-mod">numpy</span> <span class="dc-kw">as</span> <span class="dc-mod">np</span></div>
+                            <div class="dm-code-line dm-code-gap"></div>
+                            <div class="dm-code-line"><span class="dc-kw">def</span> <span class="dc-fn">detect_signatures</span>(frame):</div>
+                            <div class="dm-code-line dc-indent"><span class="dc-cm"># Threshold: animal temp 36-39°C</span></div>
+                            <div class="dm-code-line dc-indent">hot = frame[frame <span class="dc-op">&gt;</span> <span class="dc-num">36.0</span>]</div>
+                            <div class="dm-code-line dc-indent">clusters = <span class="dc-fn">find_clusters</span>(hot)</div>
+                            <div class="dm-code-line dc-indent"><span class="dc-kw">for</span> c <span class="dc-kw">in</span> clusters:</div>
+                            <div class="dm-code-line dc-indent2"><span class="dc-fn">flag_animal</span>(c.centroid)</div>
+                            <div class="dm-code-line dc-indent"><span class="dc-kw">return</span> clusters</div>
+                        </div>
+                    </div>
+                    <div class="dm-tag">04 — The Code</div>
+                    <h2 class="dm-title">Python doing the thinking</h2>
+                    <p class="dm-body">We wrote Python scripts to process the raw thermal data in real time. The algorithm thresholds temperature ranges (animal body heat is 36–39°C), finds heat clusters in the frame, filters out environmental noise, and flags potential signatures with GPS coordinates for ground teams.</p>
+                </div>
+
+                <div class="dm-step" data-step="4">
+                    <div class="dm-visual">
+                        <div class="dm-result-anim">
+                            <div class="dm-result-circle">
+                                <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="251" stroke-dashoffset="251" class="dm-result-ring"/></svg>
+                                <span class="dm-result-icon">✓</span>
+                            </div>
+                            <div class="dm-result-stats">
+                                <div class="dm-stat"><span class="dm-stat-n">4</span><span class="dm-stat-l">rotors</span></div>
+                                <div class="dm-stat"><span class="dm-stat-n">~30m</span><span class="dm-stat-l">altitude</span></div>
+                                <div class="dm-stat"><span class="dm-stat-n">live</span><span class="dm-stat-l">thermal feed</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-tag">05 — The Outcome</div>
+                    <h2 class="dm-title">It flew. It detected.</h2>
+                    <p class="dm-body">The drone flew, the thermal sensor streamed live data, and the Python pipeline correctly flagged heat signatures in field tests. A working proof-of-concept for precision agriculture — detection of animals invisible to traditional surveillance, built entirely by a team of engineering students from scratch.</p>
+                </div>
+
+            </div>
+
+            <!-- Nav buttons -->
+            <div class="dm-nav">
+                <button class="dm-btn dm-prev" onclick="dronePrev()" disabled>← Prev</button>
+                <button class="dm-btn dm-next" onclick="droneNext()">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

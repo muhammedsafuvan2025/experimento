@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safuvan — Beyond the Resume</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2305050f'/%3E%3Crect width='32' height='32' rx='6' fill='none' stroke='%235de4c7' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Georgia%2C serif' font-size='13' font-weight='300' fill='%235de4c7' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vibes.css">
+</head>
+<body>
+
+    <!-- Global ambient canvas — always behind everything -->
+    <canvas id="vAmbientCanvas" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+
+    <!-- Scroll progress bar -->
+    <div style="position:fixed;top:0;left:0;right:0;height:2px;z-index:300;background:rgba(255,255,255,0.04);">
+        <div id="vScrollBar" style="height:100%;width:0%;background:linear-gradient(90deg,#5de4c7,#a78bfa,#f093b0);transition:width 0.1s;box-shadow:0 0 8px rgba(93,228,199,0.5);"></div>
+    </div>
+
+    <!-- Floating orbs -->
+    <div class="v-orb v-orb-1"></div>
+    <div class="v-orb v-orb-2"></div>
+    <div class="v-orb v-orb-3"></div>
+    <div class="v-orb v-orb-4"></div>
+
+    <!-- Custom cursor -->
+    <div class="v-cursor-dot"  id="vCursorDot"></div>
+    <div class="v-cursor-ring" id="vCursorRing"></div>
+
+    <!-- Back nav -->
+    <a href="index.html" class="v-back" aria-label="Back to portfolio">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <span>portfolio</span>
+    </a>
+
+    <!-- Floating bottom nav -->
+    <nav class="v-nav" id="vNav">
+        <a href="#cinema"   class="v-nav-item">Cinema</a>
+        <a href="#series"   class="v-nav-item">Series</a>
+        <a href="#football" class="v-nav-item">Football</a>
+        <a href="#music"    class="v-nav-item">Music</a>
+        <a href="#lens"     class="v-nav-item">Lens</a>
+        <a href="#mind"     class="v-nav-item">Mind</a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <header class="v-hero" id="home">
+        <canvas id="v-hero-canvas"></canvas>
+        <div class="v-hero-content">
+            <div class="v-hero-eyebrow">not on the resume</div>
+            <h1 class="v-hero-title">
+                <span class="vht-word">Beyond</span>
+                <span class="vht-word vht-italic">the</span>
+                <span class="vht-word">Resume</span>
+            </h1>
+            <p class="v-hero-sub">
+                <span>Cinema</span> · <span>Football</span> · <span>Music</span> · <span>Photography</span> · <span>Series</span> · <span>Geopolitics</span>
+            </p>
+            <div class="v-hero-pills">
+                <a href="#cinema"   class="v-pill v-pill-cinema">🎬 Cinema</a>
+                <a href="#series"   class="v-pill v-pill-series">📺 Series</a>
+                <a href="#football" class="v-pill v-pill-utd">⚽ Football</a>
+                <a href="#music"    class="v-pill v-pill-music">🎵 Music</a>
+                <a href="#lens"     class="v-pill v-pill-lens">📷 Lens</a>
+                <a href="#mind"     class="v-pill v-pill-mind">🧠 Mind</a>
+            </div>
+        </div>
+        <div class="v-hero-scroll">
+            <div class="v-scroll-mouse"></div>
+            <span>scroll</span>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         CINEMA
+    ═══════════════════════════════════════════ -->
+    <section class="v-section" id="cinema">
+        <div class="v-container">
+
+            <div class="v-scrub-text" aria-hidden="true">CINEMA</div>
+            <div class="v-section-header v-reveal">
+                <span class="v-label">01 — cinema</span>
+                <h2 class="v-title v-scramble">The Church of Film</h2>
+                <p class="v-desc" data-parallax="0.06">I don't watch movies. I live inside them for two hours and carry them for years.</p>
+            </div>
+
+            <!-- GOAT card -->
+            <div class="v-goat-card v-reveal">
+                <div class="v-goat-badge">All Time GOAT</div>
+                <div class="v-goat-body">
+                    <div class="v-goat-visual">
+                        <div class="v-saturn-system">
+                            <div class="v-saturn-glow"></div>
+                            <div class="v-saturn-ring"></div>
+                            <div class="v-saturn-planet"></div>
+                        </div>
+                    </div>
+                    <div class="v-goat-text">
+                        <div class="v-goat-title">Interstellar</div>
+                        <div class="v-goat-year">Christopher Nolan · 2014</div>
+                        <p class="v-goat-quote">"Do not go gentle into that good night. Rage, rage against the dying of the light."</p>
+                        <div class="v-goat-tags">
+                            <span class="v-tag">Hans Zimmer score</span>
+                            <span class="v-tag">Cooper's wave scene</span>
+                            <span class="v-tag">tesseract</span>
+                            <span class="v-tag">love transcends time</span>
+                        </div>
+                        <p class="v-goat-note">The moment Cooper watches 23 years of messages in the cockpit — I've never felt something that big in a cinema. Physics, fatherhood, and eternity in one scene.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Film reel -->
+            <div class="v-film-reel-wrap v-reveal">
+                <div class="v-film-reel-label">the rest of the pantheon — drag to scroll</div>
+                <div class="v-film-reel" id="filmReel">
+
+                    <div class="v-film-card">
+                        <div class="v-film-poster v-fp-2001">
+                            <span class="v-fp-rank">02</span>
+                            <span class="v-fp-glyph">◯</span>
+                        </div>
+                        <div class="v-film-info">
+                            <div class="v-film-title">2001: A Space Odyssey</div>
+                            <div class="v-film-dir">Kubrick · 1968</div>
+                            <div class="v-film-note">Cinema as meditation. The monolith. HAL. The stargate. No one has done it better.</div>
+                        </div>
+                    </div>
+
+                    <div class="v-film-card">
+                        <div class="v-film-poster v-fp-oppenheimer">
+                            <span class="v-fp-rank">03</span>
+                            <span class="v-fp-glyph">⚛</span>
+                        </div>
+                        <div class="v-film-info">
+                            <div class="v-film-title">Oppenheimer</div>
+                            <div class="v-film-dir">Nolan · 2023</div>
+                            <div class="v-film-note">The Trinity sequence on IMAX. I became death, destroyer of worlds — and I believed every second.</div>
+                        </div>
+                    </div>
+
+                    <div class="v-film-card">
+                        <div class="v-film-poster v-fp-inception">
+                            <span class="v-fp-rank">04</span>
+                            <span class="v-fp-glyph">◈</span>
+                        </div>
+                        <div class="v-film-info">
+                            <div class="v-film-title">Inception</div>
+                            <div class="v-film-dir">Nolan · 2010</div>
+                            <div class="v-film-note">Dreams as architecture. The hallway fight. Hans Zimmer slowing down Édith Piaf. Masterclass.</div>
+                        </div>
+                    </div>
+
+                    <div class="v-film-card">
+                        <div class="v-film-poster v-fp-prestige">
+                            <span class="v-fp-rank">05</span>
+                            <span class="v-fp-glyph">✦</span>
+                        </div>
+                        <div class="v-film-info">
+                            <div class="v-film-title">The Prestige</div>
+                            <div class="v-film-dir">Nolan · 2006</div>
+                            <div class="v-film-note">Every magic trick has three parts. So does this film. The twist still breaks me on rewatch.</div>
+                        </div>
+                    </div>
+
+                    <div class="v-film-card">
+                        <div class="v-film-poster v-fp-blade">
+                            <span class="v-fp-rank">06</span>
+                            <span class="v-fp-glyph">◆</span>
+                        </div>
+                        <div class="v-film-info">
+                            <div class="v-film-title">Blade Runner 2049</div>
+                            <div class="v-film-dir">Villeneuve · 2017</div>
+                            <div class="v-film-note">Deakins lighting every frame like a painting. What does it mean to be real?</div>
+                        </div>
+                    </div>
+
+                    <div class="v-film-card">
+                        <div class="v-film-poster v-fp-parasite">
+                            <span class="v-fp-rank">07</span>
+                            <span class="v-fp-glyph">▽</span>
+                        </div>
+                        <div class="v-film-info">
+                            <div class="v-film-title">Parasite</div>
+                            <div class="v-film-dir">Bong Joon-ho · 2019</div>
+                            <div class="v-film-note">Genre-defies itself three times in two hours. Bong is a genius. Full stop.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Directors -->
+            <div class="v-director-strip v-reveal">
+                <div class="v-ds-label">directors I trust unconditionally</div>
+                <div class="v-ds-list">
+                    <div class="v-director">
+                        <div class="v-dir-initial">N</div>
+                        <div class="v-dir-name">Christopher Nolan</div>
+                        <div class="v-dir-note">would watch him film a grocery run</div>
+                    </div>
+                    <div class="v-director">
+                        <div class="v-dir-initial">V</div>
+                        <div class="v-dir-name">Denis Villeneuve</div>
+                        <div class="v-dir-note">Arrival, Dune, 2049 — three masterpieces</div>
+                    </div>
+                    <div class="v-director">
+                        <div class="v-dir-initial">K</div>
+                        <div class="v-dir-name">Stanley Kubrick <span class="v-dir-name-small">(the god)</span></div>
+                        <div class="v-dir-note">perfection in every single frame</div>
+                    </div>
+                    <div class="v-director">
+                        <div class="v-dir-initial">B</div>
+                        <div class="v-dir-name">Bong Joon-ho</div>
+                        <div class="v-dir-note">the only correct response is applause</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="v-divider"></div>
+
+    <!-- ═══════════════════════════════════════════
+         SERIES
+    ═══════════════════════════════════════════ -->
+    <section class="v-section" id="series">
+        <div class="v-container">
+
+            <div class="v-scrub-text" aria-hidden="true">SERIES</div>
+            <div class="v-section-header v-reveal">
+                <span class="v-label">02 — series</span>
+                <h2 class="v-title v-scramble">The Long Game</h2>
+                <p class="v-desc" data-parallax="0.06">When a story needs more than two hours. The shows I've watched twice, minimum.</p>
+            </div>
+
+            <div class="v-series-grid">
+
+                <div class="v-series-card v-series-dark v-reveal v-tilt">
+                    <div class="v-series-glyph">⊗</div>
+                    <div class="v-series-meta">
+                        <div class="v-series-name">Dark</div>
+                        <div class="v-series-year">Netflix · 2017–2020</div>
+                    </div>
+                    <div class="v-series-status v-status-rewatched">rewatched ×3</div>
+                    <p class="v-series-take">German. Three families. Four time periods. One knot. The most ambitious television ever made — and they stuck the landing. Sic Mundus Creatus Est.</p>
+                    <div class="v-series-tags">
+                        <span class="v-tag">time loops</span>
+                        <span class="v-tag">fate vs free will</span>
+                        <span class="v-tag">the knot</span>
+                    </div>
+                </div>
+
+                <div class="v-series-card v-series-bb v-reveal v-reveal-delay-1 v-tilt">
+                    <div class="v-series-glyph">⬡</div>
+                    <div class="v-series-meta">
+                        <div class="v-series-name">Breaking Bad</div>
+                        <div class="v-series-year">AMC · 2008–2013</div>
+                    </div>
+                    <div class="v-series-status v-status-rewatched">rewatched ×2</div>
+                    <p class="v-series-take">The greatest character arc in television history. Walter White's transformation is Shakespearean. Ozymandias is the best single episode of TV ever made.</p>
+                    <div class="v-series-tags">
+                        <span class="v-tag">character study</span>
+                        <span class="v-tag">hubris</span>
+                        <span class="v-tag">I am the danger</span>
+                    </div>
+                </div>
+
+                <div class="v-series-card v-series-chernobyl v-reveal v-reveal-delay-2 v-tilt">
+                    <div class="v-series-glyph">☢</div>
+                    <div class="v-series-meta">
+                        <div class="v-series-name">Chernobyl</div>
+                        <div class="v-series-year">HBO · 2019</div>
+                    </div>
+                    <div class="v-series-status v-status-watched">watched ×1 (destroyed me)</div>
+                    <p class="v-series-take">The cost of lies. Five episodes. Historically precise. Emotionally devastating. The bridge scene. The firefighters. Valery Legasov's testimony. Unforgettable.</p>
+                    <div class="v-series-tags">
+                        <span class="v-tag">true story</span>
+                        <span class="v-tag">Soviet tragedy</span>
+                        <span class="v-tag">what is the cost of lies</span>
+                    </div>
+                </div>
+
+                <div class="v-series-card v-series-succession v-reveal v-tilt">
+                    <div class="v-series-glyph">♔</div>
+                    <div class="v-series-meta">
+                        <div class="v-series-name">Succession</div>
+                        <div class="v-series-year">HBO · 2018–2023</div>
+                    </div>
+                    <div class="v-series-status v-status-rewatched">rewatched ×2</div>
+                    <p class="v-series-take">The funniest show about miserable billionaires. Tom Wambsgans is a literary achievement. The finale made me genuinely sad for people I hate.</p>
+                    <div class="v-series-tags">
+                        <span class="v-tag">power</span>
+                        <span class="v-tag">family</span>
+                        <span class="v-tag">L to the OG</span>
+                    </div>
+                </div>
+
+                <div class="v-series-card v-series-severance v-reveal v-reveal-delay-1 v-tilt">
+                    <div class="v-series-glyph">⊘</div>
+                    <div class="v-series-meta">
+                        <div class="v-series-name">Severance</div>
+                        <div class="v-series-year">Apple TV+ · 2022–</div>
+                    </div>
+                    <div class="v-series-status v-status-ongoing">ongoing — obsessed</div>
+                    <p class="v-series-take">Capitalism as horror. The office as existential prison. Every episode ends on a cliff edge. The goats scene alone justified the show's existence.</p>
+                    <div class="v-series-tags">
+                        <span class="v-tag">identity</span>
+                        <span class="v-tag">corporate dystopia</span>
+                        <span class="v-tag">who am I outside work</span>
+                    </div>
+                </div>
+
+                <div class="v-series-card v-series-sopranos v-reveal v-reveal-delay-2 v-tilt">
+                    <div class="v-series-glyph">◉</div>
+                    <div class="v-series-meta">
+                        <div class="v-series-name">The Sopranos</div>
+                        <div class="v-series-year">HBO · 1999–2007</div>
+                    </div>
+                    <div class="v-series-status v-status-rewatched">rewatched ×1</div>
+                    <p class="v-series-take">Therapy as plot device. America as mob family. The cut to black is not a mistake — it's the point. Tony is the blueprint for every anti-hero that followed.</p>
+                    <div class="v-series-tags">
+                        <span class="v-tag">the original GOAT</span>
+                        <span class="v-tag">ducks</span>
+                        <span class="v-tag">don't stop believin</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="v-watching-now v-reveal">
+                <span class="v-wn-dot"></span>
+                <span class="v-wn-label">currently on deck:</span>
+                <span class="v-wn-show">The Wire</span>
+                <span class="v-wn-sep">·</span>
+                <span class="v-wn-show">Andor</span>
+                <span class="v-wn-sep">·</span>
+                <span class="v-wn-show">True Detective S1</span>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="v-divider"></div>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTBALL
+    ═══════════════════════════════════════════ -->
+    <section class="v-section" id="football">
+        <div class="v-container">
+
+            <div class="v-scrub-text" aria-hidden="true">FOOTBALL</div>
+            <div class="v-section-header v-reveal">
+                <span class="v-label">03 — football</span>
+                <h2 class="v-title v-scramble">Pain Is Loyalty</h2>
+                <p class="v-desc" data-parallax="0.06">Supporting Manchester United is an extreme sport.</p>
+            </div>
+
+            <div class="v-utd-hero v-reveal">
+                <div class="v-utd-crest">
+                    <img src="man united.png" alt="Manchester United" class="v-utd-logo" onerror="this.style.display='none'">
+                    <div class="v-utd-wordmark">MAN UTD</div>
+                </div>
+                <div class="v-utd-copy">
+                    <div class="v-utd-since">Supporter since age 9</div>
+                    <h3 class="v-utd-tagline">Theatre of Dreams.<br>Sometimes Nightmares.</h3>
+                    <p class="v-utd-para">I became a United fan when they were the biggest club on earth. I stayed when they weren't. That's what loyalty looks like. Sir Alex leaving in 2013 changed everything — I've been waiting for the rebuild ever since. We'll be back. We're always back.</p>
+                    <div class="v-utd-stats">
+                        <div class="v-stat">
+                            <div class="v-stat-n">20</div>
+                            <div class="v-stat-l">League titles</div>
+                        </div>
+                        <div class="v-stat">
+                            <div class="v-stat-n">3</div>
+                            <div class="v-stat-l">European Cups</div>
+                        </div>
+                        <div class="v-stat">
+                            <div class="v-stat-n">∞</div>
+                            <div class="v-stat-l">Patience required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="v-players-strip v-reveal">
+                <div class="v-ps-label">the players that defined it</div>
+                <div class="v-players">
+                    <div class="v-player">
+                        <div class="v-player-num">7</div>
+                        <div class="v-player-name">Ronaldo</div>
+                        <div class="v-player-era">2003–09</div>
+                        <div class="v-player-note">before he became a brand, he was a boy wonder at Old Trafford</div>
+                    </div>
+                    <div class="v-player">
+                        <div class="v-player-num">18</div>
+                        <div class="v-player-name">Scholes</div>
+                        <div class="v-player-era">1994–2013</div>
+                        <div class="v-player-note">Zidane called him the best midfielder of his generation. he's right.</div>
+                    </div>
+                    <div class="v-player">
+                        <div class="v-player-num">14</div>
+                        <div class="v-player-name">Cantona</div>
+                        <div class="v-player-era">1992–97</div>
+                        <div class="v-player-note">the king. collar up. unapologetically himself.</div>
+                    </div>
+                    <div class="v-player">
+                        <div class="v-player-num">24</div>
+                        <div class="v-player-name">Carrick</div>
+                        <div class="v-player-era">2006–18</div>
+                        <div class="v-player-note">criminally underrated. the heartbeat nobody noticed.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="v-takes v-reveal">
+                <div class="v-takes-label">honest takes</div>
+                <div class="v-take-list">
+                    <div class="v-take"><span class="v-take-num">01</span><span class="v-take-text">Tiki-taka is beautiful but watching Messi is still more fun than watching a system.</span></div>
+                    <div class="v-take"><span class="v-take-num">02</span><span class="v-take-text">VAR has made football technically fairer and emotionally worse. Not sure it was worth it.</span></div>
+                    <div class="v-take"><span class="v-take-num">03</span><span class="v-take-text">The 1999 treble is the most dramatic sporting moment in history. If you disagree, you weren't there.</span></div>
+                    <div class="v-take"><span class="v-take-num">04</span><span class="v-take-text">International football hits different. Nations carry weight clubs never can.</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="v-divider"></div>
+
+    <!-- ═══════════════════════════════════════════
+         MUSIC
+    ═══════════════════════════════════════════ -->
+    <section class="v-section" id="music">
+        <div class="v-container">
+
+            <div class="v-scrub-text" aria-hidden="true">MUSIC</div>
+            <div class="v-section-header v-reveal">
+                <span class="v-label">04 — music</span>
+                <h2 class="v-title v-scramble">Scored Moments</h2>
+                <p class="v-desc" data-parallax="0.06">I don't have playlists. I have soundtracks to specific moods, tasks, and memories.</p>
+            </div>
+
+            <div class="v-zimmer-card v-reveal">
+                <div class="v-zimmer-left">
+                    <div class="v-zimmer-crown">♪</div>
+                    <div class="v-zimmer-name">Hans Zimmer</div>
+                    <div class="v-zimmer-title">Deployment Music Supreme</div>
+                    <p class="v-zimmer-note">When I'm in the zone — debugging a stubborn network config, writing scripts at 2 AM — Zimmer goes on. <em>Time</em> from Inception. <em>Cornfield Chase</em> from Interstellar. <em>What Are You Going To Do When You Are Not Saving The World</em> from Man of Steel. These aren't background music. They're fuel.</p>
+                </div>
+                <div class="v-zimmer-right">
+                    <div class="v-track-list">
+                        <div class="v-track">
+                            <div class="v-track-num">01</div>
+                            <div class="v-track-info"><div class="v-track-name">Time</div><div class="v-track-from">Inception · 2010</div></div>
+                            <div class="v-track-bar"><div class="v-track-fill" style="width:100%"></div></div>
+                        </div>
+                        <div class="v-track">
+                            <div class="v-track-num">02</div>
+                            <div class="v-track-info"><div class="v-track-name">Cornfield Chase</div><div class="v-track-from">Interstellar · 2014</div></div>
+                            <div class="v-track-bar"><div class="v-track-fill" style="width:92%"></div></div>
+                        </div>
+                        <div class="v-track">
+                            <div class="v-track-num">03</div>
+                            <div class="v-track-info"><div class="v-track-name">No Time For Caution</div><div class="v-track-from">Interstellar · 2014</div></div>
+                            <div class="v-track-bar"><div class="v-track-fill" style="width:88%"></div></div>
+                        </div>
+                        <div class="v-track">
+                            <div class="v-track-num">04</div>
+                            <div class="v-track-info"><div class="v-track-name">Experience</div><div class="v-track-from">Ludovico Einaudi</div></div>
+                            <div class="v-track-bar"><div class="v-track-fill" style="width:80%"></div></div>
+                        </div>
+                        <div class="v-track">
+                            <div class="v-track-num">05</div>
+                            <div class="v-track-info"><div class="v-track-name">Arrival of the Birds</div><div class="v-track-from">The Cinematic Orchestra</div></div>
+                            <div class="v-track-bar"><div class="v-track-fill" style="width:75%"></div></div>
+                        </div>
+                    </div>
+                    <!-- Animated waveform -->
+                    <div class="v-waveform" id="vWaveform"></div>
+                </div>
+            </div>
+
+            <div class="v-moods v-reveal">
+                <div class="v-mood"><div class="v-mood-icon">🌙</div><div class="v-mood-name">2 AM deployment</div><div class="v-mood-genre">Zimmer / Max Richter</div></div>
+                <div class="v-mood"><div class="v-mood-icon">💻</div><div class="v-mood-name">deep focus coding</div><div class="v-mood-genre">lo-fi / Brian Eno</div></div>
+                <div class="v-mood"><div class="v-mood-icon">🚶</div><div class="v-mood-name">walking & thinking</div><div class="v-mood-genre">movie scores / ambient</div></div>
+                <div class="v-mood"><div class="v-mood-icon">🏋️</div><div class="v-mood-name">working out</div><div class="v-mood-genre">hip-hop / electronic</div></div>
+                <div class="v-mood"><div class="v-mood-icon">🌍</div><div class="v-mood-name">exploring a city</div><div class="v-mood-genre">jazz / Arabic classical</div></div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="v-divider"></div>
+
+    <!-- ═══════════════════════════════════════════
+         LENS & TRAVEL
+    ═══════════════════════════════════════════ -->
+    <section class="v-section" id="lens">
+        <div class="v-container">
+
+            <div class="v-scrub-text" aria-hidden="true">LENS</div>
+            <div class="v-section-header v-reveal">
+                <span class="v-label">05 — lens & travel</span>
+                <h2 class="v-title v-scramble">Frame by Frame</h2>
+                <p class="v-desc" data-parallax="0.06">I want to film in every country on earth. That's not a hobby — that's a life plan.</p>
+            </div>
+
+            <div class="v-lens-layout v-reveal">
+                <div class="v-lens-manifesto">
+                    <h3 class="v-lens-h3">Why Every Country</h3>
+                    <p>Most people travel to relax. I travel to record. Every new country is a different angle on the same human story — different language, same fears, same love, same hunger for meaning. I want to capture that. All of it. With a camera and enough time.</p>
+                    <p>I moved from Kochi, India to London, Ontario — two worlds apart. That move alone is a documentary I haven't made yet. The plan is to eventually make it. Along with the 193 others.</p>
+                    <div class="v-gear-label">gear wishlist</div>
+                    <div class="v-gear-items">
+                        <span class="v-tag">Sony A7 IV</span>
+                        <span class="v-tag">24-70mm f/2.8</span>
+                        <span class="v-tag">DJI Osmo</span>
+                        <span class="v-tag">ND filters</span>
+                        <span class="v-tag">Premiere Pro</span>
+                    </div>
+                </div>
+                <div class="v-country-counter">
+                    <div class="v-cc-num" id="vCountryNum">0</div>
+                    <div class="v-cc-label">countries visited</div>
+                    <div class="v-cc-target">/ 193 goal</div>
+                    <div class="v-cc-bar"><div class="v-cc-fill" id="vCountryFill"></div></div>
+                    <div class="v-cc-countries">
+                        <span class="v-cc-flag">🇮🇳 India</span>
+                        <span class="v-cc-flag">🇦🇪 UAE</span>
+                        <span class="v-cc-flag">🇸🇦 Saudi Arabia</span>
+                        <span class="v-cc-flag">🇶🇦 Qatar</span>
+                        <span class="v-cc-flag">🇴🇲 Oman</span>
+                        <span class="v-cc-flag">🇧🇭 Bahrain</span>
+                        <span class="v-cc-flag">🇨🇦 Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="v-shot-types">
+                <div class="v-shot v-reveal">
+                    <div class="v-shot-preview v-shot-golden"></div>
+                    <div class="v-shot-name">Golden Hour</div>
+                    <div class="v-shot-note">The 20 minutes that make photographers religious</div>
+                </div>
+                <div class="v-shot v-reveal v-reveal-delay-1">
+                    <div class="v-shot-preview v-shot-street"></div>
+                    <div class="v-shot-name">Street</div>
+                    <div class="v-shot-note">Strangers carrying the weight of entire lives in one frame</div>
+                </div>
+                <div class="v-shot v-reveal v-reveal-delay-2">
+                    <div class="v-shot-preview v-shot-arch"></div>
+                    <div class="v-shot-name">Architecture</div>
+                    <div class="v-shot-note">Buildings as frozen decisions — every angle tells something</div>
+                </div>
+                <div class="v-shot v-reveal v-reveal-delay-3">
+                    <div class="v-shot-preview v-shot-astro"></div>
+                    <div class="v-shot-name">Astrophotography</div>
+                    <div class="v-shot-note">Light that left its source before humans existed. Let that sit.</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="v-divider"></div>
+
+    <!-- ═══════════════════════════════════════════
+         MIND
+    ═══════════════════════════════════════════ -->
+    <section class="v-section" id="mind">
+        <div class="v-container">
+
+            <div class="v-scrub-text" aria-hidden="true">MIND</div>
+            <div class="v-section-header v-reveal">
+                <span class="v-label">06 — what I think about</span>
+                <h2 class="v-title v-scramble">The Rabbit Holes</h2>
+                <p class="v-desc" data-parallax="0.06">Reading, thinking, arguing with myself. The things that live rent-free in my head.</p>
+            </div>
+
+            <div class="v-rabbit-grid">
+                <div class="v-rabbit v-reveal" data-glyph="🌍">
+                    <div class="v-rabbit-icon">🌍</div>
+                    <h3 class="v-rabbit-title">Geopolitics</h3>
+                    <p class="v-rabbit-body">Borders are stories we tell with force. I read everything — Kissinger, Mearsheimer, Peter Zeihan, The Economist. The world is a chessboard and most people don't even know they're pieces. Understanding power structures isn't pessimism — it's literacy.</p>
+                    <div class="v-rabbit-reads">
+                        <span class="v-tag">Prisoners of Geography</span>
+                        <span class="v-tag">The End of the World Is Just the Beginning</span>
+                        <span class="v-tag">Diplomacy</span>
+                    </div>
+                </div>
+                <div class="v-rabbit v-reveal v-reveal-delay-1" data-glyph="🚀">
+                    <div class="v-rabbit-icon">🚀</div>
+                    <h3 class="v-rabbit-title">Space Exploration</h3>
+                    <p class="v-rabbit-body">We are at the most important moment in human history for becoming multi-planetary. SpaceX. Artemis. Webb telescope images. The universe is 93 billion light-years wide and we're still arguing about borders on a pale blue dot.</p>
+                    <div class="v-rabbit-reads">
+                        <span class="v-tag">The Martian</span>
+                        <span class="v-tag">Pale Blue Dot</span>
+                        <span class="v-tag">Elon's biography (complicated)</span>
+                    </div>
+                </div>
+                <div class="v-rabbit v-reveal v-reveal-delay-2" data-glyph="📡">
+                    <div class="v-rabbit-icon">📡</div>
+                    <h3 class="v-rabbit-title">Technology & AI</h3>
+                    <p class="v-rabbit-body">I'm in IT because technology is the closest thing to magic I can actually understand. AI in 2025 feels like how the internet felt in 1995 — most people don't realize what's coming. I want to be on the right side of that shift.</p>
+                    <div class="v-rabbit-reads">
+                        <span class="v-tag">The Alignment Problem</span>
+                        <span class="v-tag">Life 3.0</span>
+                        <span class="v-tag">Hackers by Levy</span>
+                    </div>
+                </div>
+                <div class="v-rabbit v-reveal v-reveal-delay-3" data-glyph="🧠">
+                    <div class="v-rabbit-icon">🧠</div>
+                    <h3 class="v-rabbit-title">Philosophy of Mind</h3>
+                    <p class="v-rabbit-body">Consciousness is the hard problem. What is experience? Why does the universe generate subjective feeling at all? Severance made me think about this for a week. So did 2001. I don't have answers — just better questions every year.</p>
+                    <div class="v-rabbit-reads">
+                        <span class="v-tag">Gödel, Escher, Bach</span>
+                        <span class="v-tag">The Emperor's New Mind</span>
+                        <span class="v-tag">Blindsight</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="v-hot-takes v-reveal">
+                <div class="v-ht-label">opinions I'll die on</div>
+                <div class="v-ht-grid">
+                    <div class="v-ht">Interstellar's ending makes complete sense and anyone who says it doesn't wasn't paying attention.</div>
+                    <div class="v-ht">The 1999 Champions League final is the greatest sporting event of the 20th century. Two goals in injury time.</div>
+                    <div class="v-ht">Dark is better than Stranger Things in every measurable dimension.</div>
+                    <div class="v-ht">Film scores are the most underrated art form. Zimmer alone has more emotional impact than most musicians.</div>
+                    <div class="v-ht">Photography taught me to observe before I act. It made me a better engineer.</div>
+                    <div class="v-ht">We will land on Mars within 20 years. Bookmark this page.</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="v-footer">
+        <div class="v-footer-inner">
+            <div class="v-footer-quote">
+                <em>"We are all just walking each other home."</em>
+                <span>— Ram Dass · but Interstellar understood it first</span>
+            </div>
+            <h2 class="v-footer-title">You've seen who I am.<br>Now see what I can do.</h2>
+            <a href="index.html" class="v-footer-cta">
+                Back to Portfolio
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <div class="v-footer-links">
+                <a href="index.html#contact">Contact</a>
+                <span>·</span>
+                <a href="assets/Muhammed_Safuvan_Resume_3.pdf" target="_blank">Résumé</a>
+                <span>·</span>
+                <a href="https://www.linkedin.com/in/muhammed-safuvan-b81312189/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vibes.js"></script>
+</body>
+</html>
