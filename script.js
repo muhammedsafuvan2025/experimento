@@ -1108,13 +1108,15 @@ function initJourney() {
     }
 
     function animateBgYear(newYear) {
+        const isTouchDevice = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        const targetOpacity = isTouchDevice ? '0.18' : '0.04';
         bgYr.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         bgYr.style.opacity = '0';
         bgYr.style.transform = 'translate(-50%,-50%) scale(0.85)';
         setTimeout(() => {
             bgYr.textContent = newYear;
             bgYr.style.transition = 'opacity 0.6s ease, transform 0.8s cubic-bezier(0.16,1,0.3,1)';
-            bgYr.style.opacity = '0.04';
+            bgYr.style.opacity = targetOpacity;
             bgYr.style.transform = 'translate(-50%,-50%) scale(1)';
         }, 200);
     }

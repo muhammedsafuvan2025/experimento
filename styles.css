@@ -1156,6 +1156,17 @@ html.lenis { height: auto; }
   justify-content: center;
 }
 
+/* On touch/mobile: bake in a static ambient glow so the bg year is visible without a cursor */
+@media (hover: none) {
+  .journey-sticky {
+    background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(34,197,94,0.06) 0%, transparent 70%), var(--bg-0);
+  }
+  .journey-bg-year {
+    opacity: 0.18;
+    color: var(--tx-1);
+  }
+}
+
 /* Giant background year number */
 .journey-bg-year {
   position: absolute;
@@ -1167,14 +1178,14 @@ html.lenis { height: auto; }
   font-size: clamp(18vw, 22vw, 26vw);
   font-weight: 700;
   color: var(--tx-1);
-  opacity: 0.025;
+  opacity: 0.04;
   letter-spacing: -0.06em;
   pointer-events: none;
   user-select: none;
   transition: opacity 0.4s;
   will-change: transform;
 }
-[data-theme="light"] .journey-bg-year { opacity: 0.04; }
+[data-theme="light"] .journey-bg-year { opacity: 0.06; }
 
 /* Thin progress bar at very top */
 .journey-progress-bar {
